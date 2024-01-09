@@ -147,4 +147,61 @@ class profile_pic extends StatelessWidget {
   }
 }
 
+class profile_menu extends StatelessWidget {
+  const profile_menu({
 
+    required this.text,
+    required this.icon,
+    required this.press,
+    required this.textColor,
+  }) : super();
+  final String text,icon;
+  final VoidCallback press;
+  final Color textColor;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 20,
+        left: 10,
+        right: 10,
+      ),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.grey[400],
+            fixedSize: Size(450, 50),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10)
+            )
+        ),
+
+        onPressed: press,
+        child: Row(
+          children: [
+            ClipOval(
+              child: Image.asset(
+                icon,
+                height: 30,
+                width: 30,
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(width: 20,),
+            Expanded(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: textColor,
+                ),
+              ),
+            ),
+            Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.black,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
