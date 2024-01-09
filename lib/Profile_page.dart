@@ -37,4 +37,71 @@ class Profile_page extends StatelessWidget{
     );
   }
 }
+class Body extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        profile_pic(),
+        SizedBox(height: 30),
+        profile_menu(
+          icon: "images/profile.png",
+          text: "My Account",
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => account()),
+            );
+          },
+          textColor: Colors.black87,
+        ),
+        profile_menu(
+          icon: "images/setting.png",
+          text: "Settings",
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          },
+          textColor: Colors.black87,
+        ),
+        profile_menu(
+          icon: "images/messages.png",
+          text: "Messages",
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          },
+          textColor: Colors.black87,
+        ),
+        profile_menu(
+          icon: "images/bell.png",
+          text: "Notifications",
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          },
+          textColor: Colors.black87,
+        ),
+        profile_menu(
+          icon: "images/log out.png",
+          text: "Log Out",
+          press: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          },
+          textColor: Colors.red,
+        ),
+      ],
+    );
+  }
+}
+
 
