@@ -1,19 +1,19 @@
-import 'package:flutter/material.dart';
-import 'package:food_jet/file/login_page.dart';
-import 'package:food_jet/file/welcome_page.dart';
-void main() {
-  runApp(MyApp());
-}
 
+import 'package:flutter/material.dart';
+import 'package:food_jet/welcome_screen.dart';
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
-      home: LoginPage().build(context),
+      home: WelcomeScreen(),
+      // other MaterialApp configurations
     );
   }
 }
+
+void main() {
+
+  runApp(MyApp());
+}
+
