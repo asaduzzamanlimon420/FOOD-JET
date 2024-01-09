@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                           color: Color(0xFFFF2F08),
                         ),
                         Text(
-                          "New York, USA",
+                          "Mohammadpur,Dhaka",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
