@@ -104,4 +104,47 @@ class Body extends StatelessWidget {
   }
 }
 
+class profile_pic extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return SizedBox(
+      height: 115,
+      width: 115,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          CircleAvatar(
+            backgroundImage: AssetImage("images/limon.jpg"),
+          ),
+          Positioned(
+            right: 0,
+            bottom: 0,
+            child: SizedBox(
+              height: 40,
+              width: 40,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: CircleBorder(),
+                  shadowColor: Colors.blueGrey,
+                  backgroundColor: Colors.grey,
+                  padding: EdgeInsets.zero,
+                  side: BorderSide(color: Colors.white10),
+                ),
+                child: ClipOval(
+                  child: SvgPicture.asset( // Use SvgPicture.asset instead of Image.asset
+                    "images/camera.svg",
+                    height: 60,
+                    width: 60,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 
