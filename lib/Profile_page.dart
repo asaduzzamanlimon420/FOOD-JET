@@ -74,10 +74,10 @@ class Body extends StatelessWidget {
           icon: "images/messages.png",
           text: "Messages",
           press: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(builder: (context) => HomePage()),
-            // );
+             /*Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+             );*/
           },
           textColor: Colors.black87,
         ),
