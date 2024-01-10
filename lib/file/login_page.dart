@@ -2,22 +2,7 @@ import 'package:flutter/material.dart';
 //import 'package:food_jet/file/text_field.dart';
 
 class LoginPage extends StatelessWidget {
-   Widget textField({
-    required String hintText,
-    required IconData icon,
-    required Color iconColor,
-  }) {
-    return TextFormField(
-      decoration: InputDecoration(
-        prefixIcon: Icon(icon, color: iconColor),
-        hintText: hintText,
-        hintStyle: TextStyle(color: Colors.white),
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
-        ),
-      ),
-    );
-  }
+
 
   @override
   Widget build(BuildContext context) {
