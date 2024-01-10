@@ -6,6 +6,8 @@ import 'package:food_jet/login_or_register_page.dart';
 //import 'package:food_jet/login_page.dart';
 
 class AuthPage extends StatelessWidget{
+  const AuthPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -17,7 +19,7 @@ class AuthPage extends StatelessWidget{
             return HomeScreen();
           }
           else{
-            return LoginOrRegisterPage();
+            return const LoginOrRegisterPage();
           }
         },
       ),

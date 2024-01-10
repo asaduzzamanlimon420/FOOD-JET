@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
           title: Center(
             child: Text(
               message,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           ),
         );

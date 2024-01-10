@@ -4,12 +4,14 @@ import 'file/account.dart';
 //import 'main.dart';
 
 class Profile_page extends StatelessWidget{
+  const Profile_page({super.key});
+
   //const Profile_page({required Key key}) : super(key: key);
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50),
+        preferredSize: const Size.fromHeight(50),
         child: AppBar(
           backgroundColor: Colors.grey[300],
           title: const Text(
@@ -28,8 +30,8 @@ class Profile_page extends StatelessWidget{
           //titleTextStyle: ,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(
+      body: const Padding(
+        padding: EdgeInsets.only(
           top: 20,
         ),
         child: Body(),
@@ -38,19 +40,21 @@ class Profile_page extends StatelessWidget{
   }
 }
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        profile_pic(),
-        SizedBox(height: 30),
+        const profile_pic(),
+        const SizedBox(height: 30),
         profile_menu(
           icon: "images/profile.png",
           text: "My Account",
           press: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => account()),
+              MaterialPageRoute(builder: (context) => const account()),
             );
           },
           textColor: Colors.black87,
@@ -105,6 +109,8 @@ class Body extends StatelessWidget {
 }
 
 class profile_pic extends StatelessWidget {
+  const profile_pic({super.key});
+
   @override
   Widget build(BuildContext) {
     return SizedBox(
@@ -113,7 +119,7 @@ class profile_pic extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             backgroundImage: AssetImage("images/limon.jpg"),
           ),
           Positioned(
@@ -125,11 +131,11 @@ class profile_pic extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  shape: CircleBorder(),
+                  shape: const CircleBorder(),
                   shadowColor: Colors.blueGrey,
                   backgroundColor: Colors.grey,
                   padding: EdgeInsets.zero,
-                  side: BorderSide(color: Colors.white10),
+                  side: const BorderSide(color: Colors.white10),
                 ),
                 child: ClipOval(
                   child: SvgPicture.asset( // Use SvgPicture.asset instead of Image.asset
@@ -148,13 +154,13 @@ class profile_pic extends StatelessWidget {
 }
 
 class profile_menu extends StatelessWidget {
-  const profile_menu({
+  const profile_menu({super.key,
 
     required this.text,
     required this.icon,
     required this.press,
     required this.textColor,
-  }) : super();
+  });
   final String text,icon;
   final VoidCallback press;
   final Color textColor;
@@ -169,7 +175,7 @@ class profile_menu extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             backgroundColor: Colors.grey[400],
-            fixedSize: Size(450, 50),
+            fixedSize: const Size(450, 50),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10)
             )
@@ -186,7 +192,7 @@ class profile_menu extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(width: 20,),
+            const SizedBox(width: 20,),
             Expanded(
               child: Text(
                 text,
@@ -195,7 +201,7 @@ class profile_menu extends StatelessWidget {
                 ),
               ),
             ),
-            Icon(
+            const Icon(
               Icons.arrow_forward_ios,
               color: Colors.black,
             ),

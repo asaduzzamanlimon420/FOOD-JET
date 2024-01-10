@@ -13,8 +13,8 @@ class WelcomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset("images/boy.png"),
-            SizedBox(height: 5),
-            Text(
+            const SizedBox(height: 5),
+            const Text(
               "FoodJet is about to land",
               style: TextStyle(
                 fontSize: 28,
@@ -22,7 +22,7 @@ class WelcomeScreen extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
                 "Order food and get delivery within a few minutes to your door",
@@ -33,7 +33,7 @@ class WelcomeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(height: 80),
+            const SizedBox(height: 80),
             InkWell(
               onTap: () {
                 Navigator.push(
@@ -44,13 +44,13 @@ class WelcomeScreen extends StatelessWidget {
                 );
               },
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                padding: EdgeInsets.symmetric(vertical: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFF2F08),
+                  color: const Color(0xFFFF2F08),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -71,7 +71,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20), // Adjust the value based on your layout
+            const SizedBox(height: 20), // Adjust the value based on your layout
           ],
         ),
       ),

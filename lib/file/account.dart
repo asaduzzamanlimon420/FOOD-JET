@@ -7,6 +7,8 @@ import '../Profile_page.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 
 class account extends StatelessWidget {
+  const account({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +23,7 @@ class account extends StatelessWidget {
 
         // Add a back button in the top-left corner
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context, MaterialPageRoute(builder: (context) => Profile_page()));
           },
@@ -32,7 +34,7 @@ class account extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 15),
-            CircleAvatar(
+            const CircleAvatar(
               radius: 70,
               backgroundImage: AssetImage("images/limon.jpg"),
             ),
@@ -55,7 +57,7 @@ class account extends StatelessWidget {
                     // );
                   },
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     backgroundColor: Colors.deepOrange,
                   ),
                   child: const Text(
@@ -80,7 +82,7 @@ class account extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
-                offset: Offset(0, 5),
+                offset: const Offset(0, 5),
                 color: Colors.deepOrange.withOpacity(.2),
                 spreadRadius: 2,
                 blurRadius: 10
