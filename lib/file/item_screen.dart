@@ -79,7 +79,7 @@ class ItemScreen extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      "Calories",
+                      "KiloCalories",
                       style: TextStyle(
                         fontSize: 17,
                         color: Colors.black45,
@@ -88,7 +88,7 @@ class ItemScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      "120",
+                      "12",
                       style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
