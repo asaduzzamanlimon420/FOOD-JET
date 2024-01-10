@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_svg/flutter_svg.dart';
-//import 'account.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'account.dart';
 import 'main.dart';
 
 class Profile_page extends StatelessWidget{
