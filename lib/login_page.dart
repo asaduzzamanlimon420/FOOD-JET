@@ -153,9 +153,9 @@ class _LoginPageState extends State<LoginPage> {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SquareTile(imagePath: 'lib/images/google.png'),
+                    SquareTile(imagePath: 'images/google.png'),
                     SizedBox(width: 25),
-                    SquareTile(imagePath: 'lib/images/telephone-call.png')
+                    SquareTile(imagePath: 'images/telephone-call.png')
                   ],
                 ),
                 Row(
