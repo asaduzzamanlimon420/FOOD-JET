@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_jet/Profile_page.dart';
 import 'package:food_jet/file/welcome_page.dart';
 void main() {
   runApp(MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
       ),
-      home: WelcomePage(),
+      home: Profile_page(),
     );
   }
 }

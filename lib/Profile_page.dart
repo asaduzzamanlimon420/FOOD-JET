@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'file/account.dart';
-import 'main.dart';
+//import 'main.dart';
 
 class Profile_page extends StatelessWidget{
   //const Profile_page({required Key key}) : super(key: key);
@@ -133,7 +133,7 @@ class profile_pic extends StatelessWidget {
                 ),
                 child: ClipOval(
                   child: SvgPicture.asset( // Use SvgPicture.asset instead of Image.asset
-                    "images/camera.svg",
+                    "images/camera.png",
                     height: 60,
                     width: 60,
                   ),
