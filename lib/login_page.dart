@@ -1,7 +1,8 @@
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fodd_jet/components/MyTextField.dart';
-import 'package:fodd_jet/components/my_button.dart';
+import 'package:food_jet/components/MyTextField.dart';
+import 'package:food_jet/components/my_button.dart';
 
 import 'components/square_tiles.dart';
 class LoginPage extends StatefulWidget{
