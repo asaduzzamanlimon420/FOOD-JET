@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'account.dart';
+import 'package:flutter_svg/svg.dart';
+import 'file/account.dart';
 import 'main.dart';
 
 class Profile_page extends StatelessWidget{
@@ -59,21 +59,21 @@ class Body extends StatelessWidget {
           icon: "images/setting.png",
           text: "Settings",
           press: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomePage()),
-            );
-          },
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => HomePage()),
+            //  );
+            },
           textColor: Colors.black87,
         ),
         profile_menu(
           icon: "images/messages.png",
           text: "Messages",
           press: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomePage()),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => HomePage()),
+            // );
           },
           textColor: Colors.black87,
         ),
@@ -81,10 +81,10 @@ class Body extends StatelessWidget {
           icon: "images/bell.png",
           text: "Notifications",
           press: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomePage()),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => HomePage()),
+            // );
           },
           textColor: Colors.black87,
         ),
@@ -92,10 +92,10 @@ class Body extends StatelessWidget {
           icon: "images/log out.png",
           text: "Log Out",
           press: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => HomePage()),
-            );
+            // Navigator.pushReplacement(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => HomePage()),
+            // );
           },
           textColor: Colors.red,
         ),

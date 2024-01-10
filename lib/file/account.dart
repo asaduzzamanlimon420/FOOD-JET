@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../Profile_page.dart';
 //import 'editProfile.dart';
-import 'Profile_page.dart';
+
 //import 'package:flutter_svg/flutter_svg.dart';
 
 class account extends StatelessWidget {
@@ -47,10 +49,10 @@ class account extends StatelessWidget {
 
               child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => EditProfile()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                      // MaterialPageRoute(builder: (context) => EditProfile()),
+                    // );
                   },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.all(20),
