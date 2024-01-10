@@ -43,7 +43,7 @@ class ItemScreen extends StatelessWidget {
           children: [
             SizedBox(height: 10),
             Text(
-              "Mixed Pizza with beef, chilli, and cheese",
+              "Buffalo Cauliflower Carnival",
               style: TextStyle(
                 color: Colors.black45,
                 fontSize: 17,
@@ -104,7 +104,7 @@ class ItemScreen extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      "Volume",
+                      "Size",
                       style: TextStyle(
                         fontSize: 17,
                         color: Colors.black45,

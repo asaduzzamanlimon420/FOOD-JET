@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Deliver to",
+                      "Will deliver to",
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.black54,
@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      hintText: "Search your food here...",
+                      hintText: "Search your taste here...",
                       border: InputBorder.none,
                       prefixIcon: Icon(Icons.search),
                     ),
@@ -232,7 +232,6 @@ class HomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return InkWell(
                           onTap: () {
-
                             Navigator.push(context, MaterialPageRoute (builder: (context) => ItemScreen(),));
                           },
                           child: Container(
@@ -326,7 +325,7 @@ class HomeScreen extends StatelessWidget {
                                                 ),
                                                 SizedBox(width: 2),
                                                 Text(
-                                                  "1 KM",
+                                                  "2 KM",
                                                   style: TextStyle(
                                                     color: Colors.black45,
                                                     fontWeight: FontWeight.w500,
