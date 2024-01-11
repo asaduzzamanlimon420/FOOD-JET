@@ -3,11 +3,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_jet/components/MyTextField.dart';
 import 'package:food_jet/components/my_button.dart';
+import 'package:food_jet/navigation_bar.dart';
 
 import 'components/square_tiles.dart';
 class RegisterPage extends StatefulWidget{
   final Function()? onTap;
-  const RegisterPage({super.key, required this.onTap});
+  const RegisterPage({super.key, this.onTap});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -139,7 +140,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 const SizedBox(height: 25),
                 MyButton(
-                  onTap: signUserUp, text: 'Sign Up',
+                  onTap: (){ Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  const NavigationMenu()),
+                  );}, text: 'Sign Up',
                 ),
                 const SizedBox(height: 50),
                 Padding(

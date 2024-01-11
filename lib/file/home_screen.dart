@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             image: const DecorationImage(
-                              image: AssetImage("images/profile.jpg"),
+                              image: AssetImage('images/profile.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -133,7 +133,7 @@ class HomeScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
-                      child: Image.asset("images/banner.jpg"),
+                      child: Image.asset('images/banner.jpg'),
                     ),
                   ),
                   Padding(
