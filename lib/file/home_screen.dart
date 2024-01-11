@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'item_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   final List<String> foods = ["Burger", "Pizza", "Snacks", "Water"];
   final List<String> foods2 = ["Chicken Burger", "Cheese Pizza"];
   final List<Color> bgColors = [
-    Color(0xFFFBDCDA),
-    Color(0xFFD4EEF3),
-    Color(0xFFFAE6D5),
-    Color(0xFFEFCFE7),
+    const Color(0xFFFBDCDA),
+    const Color(0xFFD4EEF3),
+    const Color(0xFFFAE6D5),
+    const Color(0xFFEFCFE7),
   ];
 
   HomeScreen({Key? key});
@@ -19,24 +19,24 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Will deliver to",
+                    const Text(
+                      "Deliver to",
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.black54,
                       ),
                     ),
-                    SizedBox(height: 5),
-                    Row(
+                    const SizedBox(height: 5),
+                    const Row(
                       children: [
                         Icon(
                           Icons.location_on,
@@ -60,10 +60,10 @@ class HomeScreen extends StatelessWidget {
                         Container(
                           height: 50,
                           width: 50,
-                          margin: EdgeInsets.all(5),
+                          margin: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage("images/profile.jpg"),
                               fit: BoxFit.cover,
                             ),
@@ -71,11 +71,11 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Positioned(
                           child: Container(
-                            margin: EdgeInsets.all(5),
-                            padding: EdgeInsets.all(5),
+                            margin: const EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.white, width: 3),
-                              color: Color(0xFFFF2F08),
+                              color: const Color(0xFFFF2F08),
                               shape: BoxShape.circle,
                             ),
                           ),
@@ -87,20 +87,20 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
-                    color: Color(0xFFF3F3F3),
+                    color: const Color(0xFFF3F3F3),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "Search your taste here...",
+                    decoration: const InputDecoration(
+                      hintText: "Search your food here...",
                       border: InputBorder.none,
                       prefixIcon: Icon(Icons.search),
                     ),
@@ -110,12 +110,12 @@ class HomeScreen extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: Color(0xFFFF2F08),
+                    color: const Color(0xFFFF2F08),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.filter_list,
                     color: Colors.white,
                     size: 28,
@@ -124,24 +124,24 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset("images/banner.jpg"),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Categories",
                           style: TextStyle(
                             fontSize: 22,
@@ -150,7 +150,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "See All",
                             style: TextStyle(
                               color: Color(0xFFFF2F08),
@@ -170,8 +170,8 @@ class HomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Container(
                           width: 100,
-                          margin: EdgeInsets.only(left: 15),
-                          padding: EdgeInsets.symmetric(vertical: 5),
+                          margin: const EdgeInsets.only(left: 15),
+                          padding: const EdgeInsets.symmetric(vertical: 5),
                           decoration: BoxDecoration(
                             color: bgColors[index],
                             borderRadius: BorderRadius.circular(10),
@@ -186,7 +186,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                               Text(
                                 foods[index],
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 16,
                                   color: Colors.black87,
@@ -199,11 +199,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Popular",
                           style: TextStyle(
                             fontSize: 22,
@@ -212,7 +212,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "See All",
                             style: TextStyle(
                               color: Color(0xFFFF2F08),
@@ -231,16 +231,14 @@ class HomeScreen extends StatelessWidget {
                       itemCount: foods2.length,
                       itemBuilder: (context, index) {
                         return InkWell(
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute (builder: (context) => ItemScreen(),));
-                          },
+                          onTap: () {},
                           child: Container(
                             width: MediaQuery.of(context).size.width / 1.4,
-                            margin: EdgeInsets.only(left: 15, top: 5, bottom: 5, right: 5),
+                            margin: const EdgeInsets.only(left: 15, top: 5, bottom: 5, right: 5),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white,
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 4,
@@ -252,7 +250,7 @@ class HomeScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 ClipRRect(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     topLeft: Radius.circular(10),
                                     topRight: Radius.circular(10),
                                   ),
@@ -264,7 +262,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 10),
+                                  padding: const EdgeInsets.only(left: 10),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
@@ -273,21 +271,21 @@ class HomeScreen extends StatelessWidget {
                                         children: [
                                           Text(
                                             foods2[index],
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               fontSize: 17,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
-                                          SizedBox(height: 5),
-                                          Text(
+                                          const SizedBox(height: 5),
+                                          const Text(
                                             "Fast Food",
                                             style: TextStyle(
                                               fontSize: 16,
                                               color: Colors.black45,
                                             ),
                                           ),
-                                          SizedBox(height: 5),
-                                          Row(
+                                          const SizedBox(height: 5),
+                                          const Row(
                                             children: [
                                               Icon(
                                                 Icons.star,
@@ -314,7 +312,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                       Column(
                                         children: [
-                                          Padding(
+                                          const Padding(
                                             padding: EdgeInsets.all(8),
                                             child: Row(
                                               children: [
@@ -325,7 +323,7 @@ class HomeScreen extends StatelessWidget {
                                                 ),
                                                 SizedBox(width: 2),
                                                 Text(
-                                                  "2 KM",
+                                                  "1 KM",
                                                   style: TextStyle(
                                                     color: Colors.black45,
                                                     fontWeight: FontWeight.w500,
@@ -334,16 +332,16 @@ class HomeScreen extends StatelessWidget {
                                               ],
                                             ),
                                           ),
-                                          SizedBox(height: 10),
+                                          const SizedBox(height: 10),
                                           Container(
-                                            padding: EdgeInsets.all(12),
-                                            decoration: BoxDecoration(
+                                            padding: const EdgeInsets.all(12),
+                                            decoration: const BoxDecoration(
                                               color: Color(0xFFFF2F08),
                                               borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(10),
                                               ),
                                             ),
-                                            child: Text(
+                                            child: const Text(
                                               "\$15.89",
                                               style: TextStyle(
                                                 fontSize: 16,
