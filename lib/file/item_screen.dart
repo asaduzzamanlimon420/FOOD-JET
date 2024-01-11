@@ -46,7 +46,7 @@ class ItemScreen extends StatelessWidget {
               "Buffalo Cauliflower Carnival",
               style: TextStyle(
                 color: Colors.black45,
-                fontSize: 17,
+                fontSize: 19,
               ),
               textAlign: TextAlign.center,
             ),
