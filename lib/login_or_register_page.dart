@@ -24,13 +24,24 @@ class _LoginOrRegisterPageState extends State<LoginOrRegisterPage> {
   Widget build(BuildContext context) {
     if(showLoginPage){
       return LoginPage(
-          onTap: togglePages,
+          onTap: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginPage()),
+            );
+          },
       );
     }else{
       return RegisterPage(
-        onTap: togglePages,
+        onTap:() {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) =>  RegisterPage()),
+          );
+        },
       );
-    }
+
+  }
     }
   }
 

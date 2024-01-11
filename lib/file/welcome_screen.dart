@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_jet/auth_page.dart';
+import 'package:food_jet/login_or_register_page.dart';
+import 'package:food_jet/login_page.dart';
 import 'home_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -39,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomeScreen(),
+                    builder: (context) => const AuthPage(),
                   ),
                 );
               },
