@@ -28,7 +28,7 @@ class WelcomeScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
-                "Order food and get delivery within a few minutes to your door",
+                "From kitchen to doorstep, we're on a mission to make your taste buds dance",
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.black45,
