@@ -4,6 +4,8 @@ import 'package:food_jet/components/MyTextField.dart';
 import 'package:food_jet/components/my_button.dart';
 import 'package:food_jet/navigation_bar.dart';
 import 'package:food_jet/register_page.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'components/square_tiles.dart';
 class LoginPage extends StatefulWidget{
@@ -32,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
         password: passwordController.text,
       );
       Navigator.pop(context);
+      Get.offAll(const NavigationMenu());
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
       showErrorMsg(e.code);

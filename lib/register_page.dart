@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:food_jet/components/MyTextField.dart';
 import 'package:food_jet/components/my_button.dart';
 import 'package:food_jet/navigation_bar.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'components/square_tiles.dart';
 class RegisterPage extends StatefulWidget{
@@ -27,6 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
         );
       },
     );
+
     try {
       if( passwordController.text == confirmPasswordController.text) {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -37,6 +40,7 @@ class _RegisterPageState extends State<RegisterPage> {
         showErrorMsg('Password don\'t match');
       }
       Navigator.pop(context);
+      Get.offAll(const NavigationMenu());
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
       showErrorMsg(e.code);
