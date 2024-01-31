@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_jet/components/MyTextField.dart';
 import 'package:food_jet/components/my_button.dart';
+import 'package:food_jet/models/auth_service.dart';
 import 'package:food_jet/navigation_bar.dart';
 import 'package:food_jet/register_page.dart';
 import 'package:get/get.dart';
@@ -160,10 +161,12 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SquareTile(imagePath: 'images/google.png'),
+                    SquareTile(
+                        onTap: ()=>AuthService().signInWithGoogle(),
+                        imagePath: 'images/google.png'),
                     SizedBox(width: 25),
                     SquareTile(imagePath: 'images/telephone-call.png')
                   ],

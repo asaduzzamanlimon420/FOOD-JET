@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import 'components/square_tiles.dart';
+import 'models/auth_service.dart';
 class RegisterPage extends StatefulWidget{
   final Function()? onTap;
   const RegisterPage({super.key, this.onTap});
@@ -101,9 +102,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 MyTextField(
                   controller: emailController,
                   obscureText: false,
-                  hintText: 'Username',
+                  hintText: 'Email',
                   prefixIcon: const Icon(Icons.person_outline_outlined),
-                  labelText: 'Username',
+                  labelText: 'Email',
                 ),
                 const SizedBox(height: 10),
                 MyTextField(
@@ -176,10 +177,12 @@ class _RegisterPageState extends State<RegisterPage> {
                     ],
                   ),
                 ),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SquareTile(imagePath: 'images/google.png'),
+                    SquareTile(
+                        onTap: ()=>AuthService().signInWithGoogle(),
+                        imagePath: 'images/google.png'),
                     SizedBox(width: 25),
                     SquareTile(imagePath: 'images/telephone-call.png')
                   ],
