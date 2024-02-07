@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'item_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<String> foods = ["Burger", "Pizza", "Snacks", "Water"];
@@ -231,7 +233,14 @@ class HomeScreen extends StatelessWidget {
                       itemCount: foods2.length,
                       itemBuilder: (context, index) {
                         return InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ItemScreen(),
+                              ),
+                            );
+                          },
                           child: Container(
                             width: MediaQuery.of(context).size.width / 1.4,
                             margin: const EdgeInsets.only(left: 15, top: 5, bottom: 5, right: 5),
