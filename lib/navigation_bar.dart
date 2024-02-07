@@ -6,6 +6,8 @@ import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:food_jet/cart_page.dart';
 
+import 'components/Multiple_Resturant.dart';
+
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
 
@@ -23,7 +25,7 @@ class NavigationMenu extends StatelessWidget {
             NavigationDestination(icon: Icon(Icons.home_filled) , label: 'Home'),
             NavigationDestination(icon: Icon(Icons.food_bank_outlined) , label: 'Food'),
             NavigationDestination(icon: Icon(Icons.shopping_cart) , label: 'Cart'),
-            NavigationDestination(icon: Icon(Icons.person) , label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.person) , label: 'Profile'),
           ],
         ),
       ),
@@ -32,8 +34,13 @@ class NavigationMenu extends StatelessWidget {
   }
 }
 
-class NavigationController extends GetxController{
-  final Rx<int> selectedIndex =0.obs;
+class NavigationController extends GetxController {
+  final Rx<int> selectedIndex = 0.obs;
 
-  final screens =[HomeScreen(),Container(color: Colors.purple,),ShoppingCart(),const Profile_page()];
+  final screens = [
+    HomeScreen(),
+    const RestaurantListPage(),
+    ShoppingCart(),
+    const Profile_page()
+  ];
 }

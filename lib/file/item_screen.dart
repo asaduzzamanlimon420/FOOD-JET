@@ -1,6 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_jet/components/Payment.dart';
 
 class ItemScreen extends StatelessWidget {
   const ItemScreen({Key? key});
@@ -9,7 +9,35 @@ class ItemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // ... (Remaining code remains the same)
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black45,
+          ),
+        ),
+        title: Text(
+          "Cheese Pizza",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 25,
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: Icon(
+              Icons.favorite,
+              color: Color(0xFFFF2F08),
+              size: 28,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -49,7 +77,76 @@ class ItemScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // ... (Remaining code remains the same)
+                Column(
+                  children: [
+                    Text(
+                      "KiloCalories",
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black45,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      "12",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  height: 30,
+                  width: 2,
+                  color: Colors.black38,
+                ),
+                Column(
+                  children: [
+                    Text(
+                      "Size",
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black45,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      "12 inch",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  height: 30,
+                  width: 2,
+                  color: Colors.black38,
+                ),
+                Column(
+                  children: [
+                    Text(
+                      "Distance",
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black45,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      "1 KM",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
             SizedBox(height: 40),
@@ -58,7 +155,82 @@ class ItemScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // ... (Remaining code remains the same)
+                  Column(
+                    children: [
+                      Text(
+                        "Order",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black45,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.add_circle_outline_rounded,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(width: 2),
+                          Text(
+                            "01",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(width: 2),
+                          Icon(
+                            CupertinoIcons.minus_circle,
+                            color: Colors.black45,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "Delivery",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black45,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        "Express",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "Price",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black45,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        "\$8.99",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFFFF2F08),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -78,22 +250,30 @@ class ItemScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Add to Cart",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BuyNowPage(),
+                    ),
+                  );
+                },
+                child: Text(
+                  'Buy Now',
+                  style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
               ),
+
               SizedBox(width: 10),
-              Icon(
-                Icons.add_circle_outline_rounded,
-                color: Colors.white,
-                size: 20,
-              ),
+             // Icon(
+               // Icons.add_circle_outline_rounded,
+                //color: Colors.white,
+                //size: 20,
+              //),
             ],
           ),
+
         ),
       ),
     );
