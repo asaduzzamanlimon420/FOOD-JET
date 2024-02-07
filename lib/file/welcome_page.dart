@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
-
   Widget button({required String name, required Color color, required Color textColor}) {
-    return SizedBox(
+    return Container(
       height: 45,
       width: 300,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: color,
           shape: RoundedRectangleBorder(
-            side: const BorderSide(color: Colors.green, width: 2),
+            side: BorderSide(color: Colors.green, width: 2),
             borderRadius: BorderRadius.circular(30),
           ),
         ),
@@ -36,34 +34,36 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Text(
-                  "Welcome To FOODJET",
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+            child: Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Welcome To FOODJET",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
-                ),
-                const Column(
-                  children: [
-                    Text("Order food from our restaurant and"),
-                    Text("Make reservation in real-time"),
-                  ],
-                ),
-                button(
-                  name: 'Login',
-                  color: Colors.green,
-                  textColor: Colors.white,
-                ),
-                button(
-                  name: 'SignUp',
-                  color: Colors.white,
-                  textColor: Colors.green,
-                ),
-              ],
+                  Column(
+                    children: [
+                      Text("Order food from our restaurant and"),
+                      Text("Make reservation in real-time"),
+                    ],
+                  ),
+                  button(
+                    name: 'Login',
+                    color: Colors.green,
+                    textColor: Colors.white,
+                  ),
+                  button(
+                    name: 'SignUp',
+                    color: Colors.white,
+                    textColor: Colors.green,
+                  ),
+                ],
+              ),
             ),
           ),
         ],

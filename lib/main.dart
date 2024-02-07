@@ -1,29 +1,21 @@
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
-import 'package:food_jet/Profile_page.dart';
-import 'package:food_jet/file/welcome_page.dart';
-import 'package:food_jet/file/welcome_screen.dart';
-import 'package:food_jet/login_page.dart';
 
-import 'auth_page.dart';
-import 'firebase_options.dart';
+import 'components/Multiple_Restaurant.dart';
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(const MyApp());
+void main() {
+  runApp(MyApp());
 }
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+      ),
+      home: RestaurantListPage(),
     );
   }
-
 }
