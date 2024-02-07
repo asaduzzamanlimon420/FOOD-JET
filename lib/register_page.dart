@@ -22,28 +22,27 @@ class _RegisterPageState extends State<RegisterPage> {
   final confirmPasswordController= TextEditingController();
 
   void signUserUp() async {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
-      },
+    Get.dialog(
+      const Center(
+        child: CircularProgressIndicator(),
+      ),
     );
 
     try {
-      if( passwordController.text == confirmPasswordController.text) {
+      if (passwordController.text == confirmPasswordController.text) {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: emailController.text,
           password: passwordController.text,
         );
-      }else {
+
+        Get.back(); // Close the dialog
+        Get.off(() => const NavigationMenu()); // Navigate to NavigationMenu and remove all previous routes
+      } else {
+        Get.back(); // Close the dialog
         showErrorMsg('Password don\'t match');
       }
-      Navigator.pop(context);
-      Get.offAll(const NavigationMenu());
     } on FirebaseAuthException catch (e) {
-      Navigator.pop(context);
+      Get.back(); // Close the dialog
       showErrorMsg(e.code);
     }
   }

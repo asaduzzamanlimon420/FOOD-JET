@@ -21,23 +21,22 @@ class _LoginPageState extends State<LoginPage> {
   final passwordController = TextEditingController();
 
   void signUserIn() async {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
-      },
+    Get.dialog(
+      const Center(
+        child: CircularProgressIndicator(),
+      ),
     );
+
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text,
         password: passwordController.text,
       );
-      Navigator.pop(context);
-      Get.offAll(const NavigationMenu());
+
+      Get.back(); // Close the dialog
+      Get.off(() => const NavigationMenu()); // Navigate to NavigationMenu and remove all previous routes
     } on FirebaseAuthException catch (e) {
-      Navigator.pop(context);
+      Get.back(); // Close the dialog
       showErrorMsg(e.code);
     }
   }
