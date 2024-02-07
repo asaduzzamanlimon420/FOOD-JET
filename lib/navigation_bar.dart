@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:food_jet/Profile_page.dart';
 import 'package:food_jet/file/home_screen.dart';
 import 'package:food_jet/homepage.dart';
+import 'package:food_jet/models/menu.dart';
+import 'package:food_jet/pages/homepage.dart';
 import 'package:get/get.dart';
+
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:food_jet/cart_page.dart';

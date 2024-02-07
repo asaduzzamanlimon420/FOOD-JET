@@ -12,7 +12,7 @@ class ChatPage extends StatelessWidget {
       backgroundColor: Colors.indigo.shade400,
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade400,
-        title: const Text('John Doe'),
+        title: const Text('Limon'),
         elevation: 0,
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))],
       ),
@@ -48,7 +48,7 @@ class ChatPage extends StatelessWidget {
                 itemCount: 5,
                 reverse: true,
                 itemBuilder: (context, i) {
-                  return ChatWidgets.messagesCard(i,'Firebase projects are containers for your app Apps in a project share features like Real-time Database and Analytics','04:51 pm');
+                  return ChatWidgets.messagesCard(i,'Ajke Ds eo fail sd teo fail!','01:25 pm');
                 },
               ),
             ),

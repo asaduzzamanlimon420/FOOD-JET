@@ -97,8 +97,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: ListView.builder(
                               itemBuilder: (context, i) {
                                 return ChatWidgets.card(
-                                  title: 'John Doe',
-                                  subtitle: 'Hi, How are you !',
+                                  title: 'Limon the Zinku Lamisa',
+                                  subtitle: '!',
                                   time: '04:40',
                                   onTap: () {
                                     Navigator.of(context).push(

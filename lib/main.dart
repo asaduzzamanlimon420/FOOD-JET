@@ -4,7 +4,7 @@ import 'package:food_jet/Profile_page.dart';
 import 'package:food_jet/file/welcome_page.dart';
 import 'package:food_jet/file/welcome_screen.dart';
 import 'package:food_jet/login_page.dart';
-
+import 'package:provider/provider.dart';
 import 'auth_page.dart';
 import 'firebase_options.dart';
 

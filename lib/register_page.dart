@@ -145,10 +145,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 const SizedBox(height: 25),
                 MyButton(
-                  onTap: (){ Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) =>  const NavigationMenu()),
-                  );}, text: 'Sign Up',
+                  onTap: signUserUp, text: 'Sign Up',
                 ),
                 const SizedBox(height: 50),
                 Padding(
