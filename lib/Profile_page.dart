@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'file/account.dart';
 //import 'main.dart';
 
@@ -125,31 +124,6 @@ class profile_pic extends StatelessWidget {
             children: [
               const CircleAvatar(
                 backgroundImage: AssetImage("images/limon.jpg"),
-              ),
-              Positioned(
-                right: 0,
-                bottom: 0,
-                child: SizedBox(
-                  height: 40,
-                  width: 40,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      shape: const CircleBorder(),
-                      shadowColor: Colors.blueGrey,
-                      backgroundColor: Colors.grey,
-                      padding: EdgeInsets.zero,
-                      side: const BorderSide(color: Colors.white10),
-                    ),
-                    child: ClipOval(
-                      child: SvgPicture.asset( // Use SvgPicture.asset instead of Image.asset
-                        "images/camera.png",
-                        height: 60,
-                        width: 60,
-                      ),
-                    ),
-                  ),
-                ),
               ),
             ],
           ),
