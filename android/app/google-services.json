@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "54655812814",
+    "project_id": "foodjet-cca3d",
+    "storage_bucket": "foodjet-cca3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54655812814:android:41a59666d6c20ae8cabc9f",
+        "android_client_info": {
+          "package_name": "com.example.fodd_jet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54655812814-2nj7fp9o433992e1dn3d3n871onk8gqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fodd_jet",
+            "certificate_hash": "1542e9a3065ec5b123e975b2ad26d0c0bc22753d"
+          }
+        },
+        {
+          "client_id": "54655812814-55mn4goff5aj5okpif00035nj15jhtih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxYqvOBumzah8XATjx_KzjLHwv-GTW0S8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54655812814-55mn4goff5aj5okpif00035nj15jhtih.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "54655812814-mkrureup6192nolrm59v4vcu5mi4147k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foddJet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54655812814:android:77844c322b66a6d6cabc9f",
+        "android_client_info": {
+          "package_name": "com.example.food_jet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54655812814-55mn4goff5aj5okpif00035nj15jhtih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxYqvOBumzah8XATjx_KzjLHwv-GTW0S8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54655812814-55mn4goff5aj5okpif00035nj15jhtih.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "54655812814-mkrureup6192nolrm59v4vcu5mi4147k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foddJet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
